@@ -11,7 +11,7 @@ class SpringSecurityOauthLinkedinGrailsPlugin {
         "grails-app/views/error.gsp"
     ]
 
-    def title = "Facebook for Spring Security OAuth plugin"
+    def title = "LinkedIn for Spring Security OAuth plugin"
     def author = "Mihai Cazacu, Enrico Comiti, Alexey Zhokhov"
     def authorEmail = "donbeave@gmail.com"
     def description = '''\
