@@ -20,6 +20,8 @@ import org.scribe.model.Token
 /**
  * OAuth authentication token for Linkedin users.
  *
+ * @author <a href='mailto:enrico@comiti.name'>Enrico Comiti</a>
+ * @author Thierry Nicola
  */
 class LinkedinOAuthToken extends OAuthToken {
 
@@ -34,6 +36,10 @@ class LinkedinOAuthToken extends OAuthToken {
     }
 
     String getSocialId() {
+        return profileId
+    }
+    
+    String getScreenName() {
         return profileId
     }
 
