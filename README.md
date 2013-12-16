@@ -1,4 +1,4 @@
-grails-spring-security-oauth-linkedin
+grails-spring-security-oauth-linkedin [![Build Status](https://api.travis-ci.org/donbeave/grails-spring-security-oauth-linkedin.png?branch=master)](https://travis-ci.org/donbeave/grails-spring-security-oauth-linkedin)
 ====================================
 
 LinkedIn extension for [Grails Spring Security OAuth][spring-security-oauth-plugin] plugin
