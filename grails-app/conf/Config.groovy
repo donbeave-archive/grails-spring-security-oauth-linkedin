@@ -1,13 +1,6 @@
 // configuration for plugin testing - will not be included in the plugin zip
 
 log4j = {
-    // Example of changing the log pattern for the default console
-    // appender:
-    //
-    //appenders {
-    //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
-    //}
-
     error  'org.codehaus.groovy.grails.web.servlet',  //  controllers
            'org.codehaus.groovy.grails.web.pages', //  GSP
            'org.codehaus.groovy.grails.web.sitemesh', //  layouts
@@ -25,7 +18,16 @@ log4j = {
 environments {
   test {
     oauth {
-      providers {}
+      providers {
+        linkedin {
+            api = org.scribe.builder.api.LinkedInApi
+            key = 'oauth_linkedin_key'
+            secret = 'oauth_linkedin_secret'
+            successUri = '/oauth/linkedin/success'
+            failureUri = '/oauth/linkedin/failure'
+            callback = "${baseURL}/oauth/linkedin/callback"
+        }
+      }
     }
   }
 }
