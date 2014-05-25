@@ -17,6 +17,10 @@ package grails.plugin.springsecurity.oauth
 
 import grails.converters.JSON
 
+/**
+ * @author <a href='mailto:enrico@comiti.name'>Enrico Comiti</a>
+ * @author Thierry Nicola
+ */
 class LinkedinSpringSecurityOAuthService {
 
     def oauthService
@@ -49,9 +53,9 @@ class LinkedinSpringSecurityOAuthService {
         if ( !query ) {
             throw new OAuthLoginException("No query string from Linkedin")
         }
-        def params = query.split('&').inject([:]) { map, kv-> 
-            def (key, value) = kv.split('=').toList(); 
-            map[key] = value != null ? URLDecoder.decode(value) : null; 
+        def params = query.split('&').inject([:]) { map, kv->
+            def (key, value) = kv.split('=').toList();
+            map[key] = value != null ? URLDecoder.decode(value) : null;
             map
         }
         if (!params?.id) {
